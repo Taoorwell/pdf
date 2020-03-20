@@ -20,7 +20,7 @@ def pdf_extract(path, start_page, end_page):
     for page in range(start_page-1, end_page):
         pdf_writer.addPage(pdf.getPage(page))
     output_filename = "{}_page_{}-{}.pdf".format(fname, start_page, end_page)
-    with open(output_filename, "wb") as out:
+    with open('merge/'+ output_filename, "wb") as out:
         pdf_writer.write(out)
     print("Create:{}".format(output_filename))
 
